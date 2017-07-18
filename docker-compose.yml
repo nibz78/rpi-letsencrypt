@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+ letsencrypt:
+  container_name: letsencrypt
+  image: rpi-letsencrypt
+  network_mode: "host"
+  volumes:
+   - /etc/letsencrypt:/etc/letsencrypt
+   - /var/www/html:/var/www/html
